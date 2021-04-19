@@ -1,0 +1,2 @@
+# gsystem-manager
+I often find myself unsatisfied with the built-in system management tools in linux. Frequently I want more information about what each service is doing on my system. This project aims to build a GTK+3 user interface for systemd to allow users to manage services, as well as provide more information about what each service is. This should include features such as allowing users to click on services to see a detailed description akin to the output of a systemctl status command.
