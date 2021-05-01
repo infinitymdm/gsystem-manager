@@ -10,3 +10,7 @@
 # Ignore 'bin' directory
 bin/
 */bin/*
+
+# Ignore '.vscode' files
+.vscode
+*/.vscode/*
