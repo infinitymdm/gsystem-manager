@@ -12,4 +12,5 @@ bin/
 */bin/*
 
 # Ignore '.vscode' files
-*.vscode
+.vscode
+*/.vscode/*
