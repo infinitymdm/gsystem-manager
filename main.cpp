@@ -1,13 +1,13 @@
 #include <gtkmm.h>
 
-class MainWindow : public Gtk::Window {
-    public:MainWindow();
-};
+// class MainWindow : public Gtk::Window {
+//     public:MainWindow();
+// };
 
-MainWindow::MainWindow() {
-    set_title("Simple GTK App");
-    set_default_size(300,200);
-}
+// MainWindow::MainWindow() {
+//     set_title("Simple GTK App");
+//     set_default_size(300,200);
+// }
 
 Glib::RefPtr<Gtk::Application> app;
 
