@@ -27,4 +27,4 @@ int main(int argc, char* argv[]) {
     return app->run(argc, argv);
 }
 
-// Compile with: gcc main.cpp -o main `pkg-config gtkmm-3.0 --cflags --libs` -lstdc++
+// Compile by executing "make" from src directory
