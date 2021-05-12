@@ -27,4 +27,4 @@ int main(int argc, char* argv[]) {
     return app->run(argc, argv);
 }
 
-// Compile by executing "make" from src directory
+// Compile by executing "make" from root project directory
