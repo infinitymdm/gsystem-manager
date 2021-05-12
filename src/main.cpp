@@ -30,4 +30,4 @@ int main(int argc, char* argv[]) {
     return 0;
 }
 
-// Compile with: g++ src/main.cpp -o bin/main `pkg-config gtkmm-3.0 --cflags --libs` -lstdc++ -L/home/marcus/Documents/gsystem-manager/lib/ -l:libpfs.so -L/usr/lib -l:libasan.so
+// Compile with: g++ src/main.cpp -o bin/main `pkg-config gtkmm-3.0 --cflags --libs` -lstdc++ -Wl,-rpath=/path/to/repo/gsystem-manager/lib -L/path/to/repo/gsystem-manager/lib/ -l:libpfs.so
