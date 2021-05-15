@@ -2,32 +2,6 @@
 <!-- Generated with glade 3.22.2 -->
 <interface>
   <requires lib="gtk+" version="3.24"/>
-  <object class="GtkListStore" id="process_tree">
-    <columns>
-      <!-- column-name Process -->
-      <column type="gchararray"/>
-      <!-- column-name CPU -->
-      <column type="gdouble"/>
-      <!-- column-name Memory -->
-      <column type="gdouble"/>
-      <!-- column-name Priority -->
-      <column type="gchararray"/>
-    </columns>
-    <data>
-      <row>
-        <col id="0" translatable="yes">Process 1</col>
-        <col id="1">50</col>
-        <col id="2">30</col>
-        <col id="3" translatable="yes">Highest</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">Process 2</col>
-        <col id="1">20</col>
-        <col id="2">20</col>
-        <col id="3" translatable="yes">Normal</col>
-      </row>
-    </data>
-  </object>
   <object class="GtkWindow" id="main_window">
     <property name="can_focus">False</property>
     <property name="default_width">440</property>
@@ -205,16 +179,16 @@
               <object class="GtkTreeView">
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
-                <property name="model">process_tree</property>
                 <property name="search_column">0</property>
                 <property name="level_indentation">1</property>
+                <property name="model">process_tree</property>
                 <child internal-child="selection">
                   <object class="GtkTreeSelection"/>
                 </child>
                 <child>
                   <object class="GtkTreeViewColumn">
                     <property name="resizable">True</property>
-                    <property name="title" translatable="yes">Process</property>
+                    <property name="title" translatable="yes">Command</property>
                     <child>
                       <object class="GtkCellRendererText"/>
                       <attributes>
@@ -262,5 +236,17 @@
         </child>
       </object>
     </child>
+  </object>
+  <object class="GtkTreeStore" id="process_tree">
+    <columns>
+      <!-- column-name Command -->
+      <column type="gchararray"/>
+      <!-- column-name CPU -->
+      <column type="gchararray"/>
+      <!-- column-name Memory -->
+      <column type="gchararray"/>
+      <!-- column-name Priority -->
+      <column type="gchararray"/>
+    </columns>
   </object>
 </interface>
