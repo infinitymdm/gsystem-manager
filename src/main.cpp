@@ -5,15 +5,6 @@
 using namespace pfs;
 using namespace std;
 
-// class MainWindow : public Gtk::Window {
-//     public:MainWindow();
-// };
-
-// MainWindow::MainWindow() {
-//     set_title("Simple GTK App");
-//     set_default_size(300,200);
-// }
-
 Glib::RefPtr<Gtk::Application> app;
 
 void load_ui() {
@@ -36,4 +27,4 @@ int main(int argc, char* argv[]) {
     return app->run(argc, argv);
 }
 
-// Compile with: gcc main.cpp -o main `pkg-config gtkmm-3.0 --cflags --libs` -lstdc++
+// Compile by executing "make" from root project directory
