@@ -1,12 +1,12 @@
 #include <gtkmm.h>
 #include "../include/gsm/app.hpp"
 
-namespace gsm {
+using namespace gsm;
 
-    int main(int argc, char* argv[]) {
+int main(int argc, char* argv[]) {
 
-        Glib::init();
-        return start_app(argc, argv);
-    }
+    Glib::init();
+    return start_app(argc, argv);
 }
+
 // Compile by executing "make" from root project directory
