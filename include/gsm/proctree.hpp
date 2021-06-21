@@ -1,18 +1,22 @@
 #pragma once
+#include <iostream>
+#include <string>
+#include <string.h>
 #include <gtkmm.h>
 #include "../pfs/procfs.hpp"
 #include "../gsm/app.hpp"
-#include <iostream>
 
 namespace gsm {
 
     namespace proctree {
 
-        pfs::procfs pfs_obj();
+        void update_tree_store(Glib::RefPtr<Gtk::TreeStore> treeModel) {
 
-        void update_tree_store() {
-            for (auto &x : pfs_obj.get_processes()) {
-                std::cout << x.get_comm() << std::endl;
+            std::string processName;
+
+            for (auto &process : pfs::procfs().get_processes()) {
+                processName = process.get_comm();
+                std::cout << processName << std::endl;
             }
         }
     }
