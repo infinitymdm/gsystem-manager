@@ -16,7 +16,8 @@ namespace gsm {
 
             for (auto &process : pfs::procfs().get_processes()) {
                 processName = process.get_comm();
-                std::cout << processName << std::endl;
+                Gtk::TreeIter it = treeModel->append();
+                it->set_value(0, process);
             }
         }
     }

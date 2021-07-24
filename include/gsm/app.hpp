@@ -18,7 +18,7 @@ namespace gsm {
         builder->get_widget("main_window", window);
         currentApplication->add_window(*window);
         
-        Glib::RefPtr<Gtk::TreeStore> treeModel;
+        Glib::RefPtr<Gtk::TreeStore> treeModel = builder->get_object("process_tree");
         gsm::proctree::update_tree_store(treeModel);
 
         window->show();
